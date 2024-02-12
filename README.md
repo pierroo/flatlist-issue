@@ -1,13 +1,7 @@
-# flatlist-issue
-
-![Build](https://github.com/pierroo/flatlist-issue/workflows/Pre%20Merge%20Checks/badge.svg)
-
-This is your new React Native Reproducer project.
-
-## Reproducer todo list
-
-- [x] Create a new reproducer project.
-- [ ] Git clone your repository locally.
-- [ ] Edit the project to reproduce the failure you're seeing.
-- [ ] Push your changes, so that Github Actions can run the CI.
-- [ ] Make sure the repository is public and share the link with the issue you reported.
+<FlatList
+            data={LIST}
+            renderItem={renderItem}
+            keyExtractor={(e) => e.id}
+            getItemLayout={getItemLayout}
+            // initialNumToRender={0} => this one breaks the UI, nothing displays if 0, 10 will display otherwise regardless of true length
+            />
